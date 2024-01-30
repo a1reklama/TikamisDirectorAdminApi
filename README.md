@@ -218,6 +218,28 @@
 ```
 Ответ идентичен тому, что присылает метод **GET** `director-api/manage/settings`.
 
+#### POST `sadmin-api/manage/settings`
+По нажатию на кнопку применить на экране "Технические настройки" вызывается этот метод.  
+В него нужно загрузить все данные (измененные и неизмененные). Формат запроса такой:  
+```json
+{
+  "carCenterId": "ИБ-328298",
+  "login": "newLogin1",
+  "password": "newPassword99",
+  "bookingAvailable": true,
+  "postsEquipment": 3,
+  "shiftsStart": 480,
+  "shiftsFinish": 1200,
+  "timeZoneOffsetHours": 5
+  "clearanceMinutes": 17,
+  "orderDepthDays": 5
+}
+```
+Все поля значат то же самое, что и в таблице выше.  
+ 
+От сервера будет ответ с обновленными данными.  
+Формат ответа идентичен тому, что присылает метод **GET** `sadmin-api/manage/settings/{carCenterId}`.  
+
 ## Общее описание тела запроса для всех методов, где используется фильтрация
 Фильтр передаётся в теле запроса, выглядит так:
 ```json
