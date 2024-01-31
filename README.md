@@ -6,23 +6,23 @@
 
 ## Краткое описание методов для директора/суперадмина
 
-- POST `director-api/login` / `sadmin-api/login` - Вход по логину и паролю.
-- POST `director-api/refresh` / `sadmin-api/refresh` - Обновление токенов.
-- POST `director-api/logout` / `sadmin-api/logout` - деавторизация.
-- GET `director-api/time` / `sadmin-api/time` - Получить текущее для прикрепленного автосервиса время.
+- POST `director-api/login` / `sadmin-api/login` - Вход по логину и паролю. [ссылка](#post--apilogin)
+- POST `director-api/refresh` / `sadmin-api/refresh` - Обновление токенов. [ссылка](#post--apirefresh)
+- POST `director-api/logout` / `sadmin-api/logout` - деавторизация. [ссылка](#post--apilogout)
+- GET `director-api/time` / `sadmin-api/time` - Получить текущее для прикрепленного автосервиса время. [ссылка](#get--apitime)
 - POST `director-api/report-emails` / `sadmin-api/report-emails` - Рассылка отчетов по email адресам.
-- GET `director-api/all-works` / `sadmin-api/all-works` - Получить id и названия всех работ (понадобится для фильтров).
-- GET `sadmin-api/all-car-centers` - Получить id и названия всех автосервисов (также для фильтров).
-- GET `director-api/center-info` - Получить название города и адреса автосервиса, к которому прикреплен директор панели.
+- GET `director-api/all-works` / `sadmin-api/all-works` - Получить id и названия всех работ (понадобится для фильтров). [ссылка](#get--apiall-works)
+- GET `sadmin-api/all-car-centers` - Получить id и названия всех автосервисов (также для фильтров). [ссылка](#get-sadmin-apiall-car-centers)
+- GET `director-api/center-info` - Получить название города и адреса автосервиса, к которому прикреплен директор панели. [ссылка](#get-director-apicenter-info)
 
 ## Раздел УПРАВЛЕНИЕ
-- GET `sadmin-api/manage/car-centers` - Получить список и описание для всех автосервисов для экрана "Управление автосервисами".
-- GET `director-api/manage/settings` / `sadmin-api/manage/settings/{carCenterId}` - Получить текущие настройки автосервиса. Экран "Технические настройки"
-- POST `director-api/manage/settings` / `sadmin-api/manage/settings` - Изменение настроек определенного автосервиса.
+- GET `sadmin-api/manage/car-centers` - Получить список и описание для всех автосервисов для экрана "Управление автосервисами". [ссылка](#get-sadmin-apimanagecar-centers-)
+- GET `director-api/manage/settings` / `sadmin-api/manage/settings/{carCenterId}` - Получить текущие настройки автосервиса. Экран "Технические настройки" [ссылка(директор)](#get-director-apimanagesettings) [ссылка(суперадмин)](#get-sadmin-apimanagesettingscarcenterid)
+- POST `director-api/manage/settings` / `sadmin-api/manage/settings` - Изменение настроек определенного автосервиса. [ссылка(директор)](#post-director-apimanagesettings) [ссылка(суперадмин)](#post-sadmin-apimanagesettings)
 
 > После методов выше, все нижеописанные будут отличаться только наличием фильтра "автосервисы".
 
-- POST `-api/manage/get-orders` - Данные для экрана "записи клиентов".
+- POST `-api/manage/get-orders` - Данные для экрана "записи клиентов". [ссылка](#post--apimanageget-orders)
 - DELETE - `-api/manage/order` - Удалить одну запись (по нажатию на крестик).
 
 - POST - `-api/manage/get-shift-calendar` - Получить "календарь рабочих смен"
@@ -30,7 +30,7 @@
 
 ## Раздел АНАЛИТИКА
 
-- POST - `-api/analytics/get-workloads` - Получить данные для экрана "Загруженность сервиса"
+- POST - `-api/analytics/get-workloads` - Получить данные для экрана "Загруженность сервиса" [ссылка](#post--apianalyticsget-workloads)
 - POST - `-api/order` - Добавить заказ в этом же экране.
 
 - POST - `-api/analytics/get-posts-KPD` - Получить данные для "Кпд постов"
@@ -95,11 +95,45 @@
 Этот метод может понадобиться для формирования фильтров по умолчанию, когда пользователь впервые заходит на страницы, где есть фильтры с датой.
 
 #### GET `director-api/center-info`
+Получить информацию об одном автосервисе. Нужно для отображения правильной информации сверху в панели директора
 Ответ от сервера будет в формате:  
 ```json
 {
   "city": "Когалым",
-  "addressName": "Проспект Нефтяников, 1а/4​"
+  "addressName": "Проспект Нефтяников, 1а/4"
+}
+```
+
+#### GET `sadmin-api/all-car-centers`
+Получить все автосервисы. Может понадобиться для фильтров
+Ответ:
+```json
+{
+  "carCenters": [
+    {
+      "id": "ИБ-38742",
+      "city": "Когалым",
+      "addressName": "Проспект Нефтяников, 1а/4"
+    }
+  ]
+}
+```
+
+#### GET `-api/all-works`
+Получить id и имя услуг. Используется в фильтрах.  
+Ответ от сервера в формате:
+```json
+{
+  "works": [
+    {
+      "id": "ИБ-84293",
+      "name": "Шумоизоляция"
+    },
+    {
+      "id": "ИБ-839293",
+      "name": "Замена масла"
+    }
+  ]
 }
 ```
 
