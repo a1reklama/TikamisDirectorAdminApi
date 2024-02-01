@@ -419,14 +419,14 @@
           ]
         },
         {
-          "number": 2,
+          "post": 2,
           "carCenter": "Когалым, пр. Нефтяников 1A",
           "mechanic": "Чистяков Никита Николаевич",
           "isActive": true,
-          "blocks": [...]
+          "blocks": [{}, {}, {}]
         },
         {
-          "number": 1,
+          "post": 1,
           "carCenter": "Сургут, Аэрофлотская, 5/2",
           "mechanic": "Шевелев Владимир Дмитриевич",
           "isActive": false,
