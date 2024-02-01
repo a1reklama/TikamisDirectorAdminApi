@@ -395,24 +395,24 @@
             {
               "type": "busy",
               "plate": "Т245УЕ",
-              "blockStart": "485",
-              "blockEnd": "660",
+              "blockStart": 485,
+              "blockEnd": 660,
               "post": 1,
               "carCenter": "ИБ-432842"
             },
             {
               "type": "short",
               "plate": "У005HA",
-              "blockStart": "1534",
-              "blockEnd": "1702",
+              "blockStart": 1534,
+              "blockEnd": 1702,
               "post": 2,
               "carCenter": "ИБ-432842"
             },
             {
               "type": "free",
               "plate": null,
-              "blockStart": "1534",
-              "blockEnd": "1702",
+              "blockStart": 1534,
+              "blockEnd": 1702,
               "post": 1,
               "carCenter": "ИБ-432842"
             }
