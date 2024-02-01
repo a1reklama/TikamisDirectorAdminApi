@@ -282,19 +282,19 @@
 ```json
 {
   "filters":
-      {
-        "interval": "day",
-        "dateStart": 1706109723,
-        "works": [
-          "ИБ-273282",
-          "ИБ-938227"
-        ],
-        "carCenters": [
-          "ИБ-29388",
-          "ИБ-923873"
-        ],
-        "page": 1
-      }
+    {
+      "interval": "day",
+      "dateStart": 1706109723,
+      "works": [
+        "ИБ-273282",
+        "ИБ-938227"
+      ],
+      "carCenters": [
+        "ИБ-29388",
+        "ИБ-923873"
+      ],
+      "page": 1
+    }
 }
 ```
 
@@ -390,49 +390,49 @@
 Результат, возвращаемый от сервера:  
 ```json
 {
-  "postStates": 
-          [
+  "items": 
+      [
+        {
+          "post": 1,
+          "carCenter": "Когалым, пр. Нефтяников 1A",
+          "mechanic": "Егоров Михаил Тимурович",
+          "isActive": true,
+          "blocks": [
             {
-              "post": 1,
-              "carCenter": "Когалым, пр. Нефтяников 1A",
-              "mechanic": "Егоров Михаил Тимурович",
-              "isActive": true,
-              "blocks": [
-                {
-                  "type": "busy",
-                  "plate": "Т245УЕ",
-                  "blockStart": 485,
-                  "blockEnd": 660
-                },
-                {
-                  "type": "short",
-                  "plate": "У005HA",
-                  "blockStart": 1534,
-                  "blockEnd": 1702
-                },
-                {
-                  "type": "free",
-                  "plate": null,
-                  "blockStart": 1534,
-                  "blockEnd": 1702
-                }
-              ]
+              "type": "busy",
+              "plate": "Т245УЕ",
+              "blockStart": 485,
+              "blockEnd": 660
             },
             {
-              "number": 2,
-              "carCenter": "Когалым, пр. Нефтяников 1A",
-              "mechanic": "Чистяков Никита Николаевич",
-              "isActive": true,
-              "blocks": [...]
+              "type": "short",
+              "plate": "У005HA",
+              "blockStart": 1534,
+              "blockEnd": 1702
             },
             {
-              "number": 1,
-              "carCenter": "Сургут, Аэрофлотская, 5/2",
-              "mechanic": "Шевелев Владимир Дмитриевич",
-              "isActive": false,
-              "blocks": []
+              "type": "free",
+              "plate": null,
+              "blockStart": 1534,
+              "blockEnd": 1702
             }
           ]
+        },
+        {
+          "number": 2,
+          "carCenter": "Когалым, пр. Нефтяников 1A",
+          "mechanic": "Чистяков Никита Николаевич",
+          "isActive": true,
+          "blocks": [...]
+        },
+        {
+          "number": 1,
+          "carCenter": "Сургут, Аэрофлотская, 5/2",
+          "mechanic": "Шевелев Владимир Дмитриевич",
+          "isActive": false,
+          "blocks": []
+        }
+      ]
 }
 ```
 
