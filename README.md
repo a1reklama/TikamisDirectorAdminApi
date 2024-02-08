@@ -33,7 +33,7 @@
 - POST - `-api/analytics/get-workloads` - Получить данные для экрана "Загруженность сервиса" [ссылка](#post--apianalyticsget-workloads)
 - POST - `-api/order` - Добавить заказ в этом же экране.
 
-- POST - `-api/analytics/get-posts-KPD` - Получить данные для "Кпд постов"
+- POST - `-api/analytics/get-posts-KPD` - Получить данные для "Кпд постов" [ссылка](#post--apianalyticsget-posts-kpd)
 - POST - `-api/analytics/get-center-KPD` - Получить данные для "Кпд сервиса"
 - POST - `-api/analytics/get-order-history` - Получить данные для экрана "сервисная история"
 - POST - `-api/analytics/get-reviews` - Получить данные для экрана с отзывами
