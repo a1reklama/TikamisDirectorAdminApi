@@ -35,7 +35,7 @@
 
 - POST - `-api/analytics/get-posts-KPD` - Получить данные для "Кпд постов" [ссылка](#post--apianalyticsget-posts-kpd)
 - POST - `-api/analytics/get-center-KPD` - Получить данные для "Кпд сервиса"
-- POST - `-api/analytics/get-order-history` - Получить данные для экрана "сервисная история"
+- POST - `-api/analytics/get-order-history` - Получить данные для экрана "сервисная история" [ссылка](#post--apianalyticsget-order-history)
 - POST - `-api/analytics/get-reviews` - Получить данные для экрана с отзывами
 
 ## Раздел ОТЧЕТЫ
@@ -327,6 +327,7 @@
       "bookingTime": 1706109723,
       "phone": "+7912345678",
       "plate": "AA001A",
+      "carCenterName": "Сургут, Аэрофлотская 12/1",
       "works": [
         {
           "workId": "ИБ-2373",
@@ -484,3 +485,10 @@
   ]
 }
 ```
+
+#### POST -api/analytics/get-order-history
+
+Тело запроса такое же как и в любых других запросах по получению табличных данных.  
+Будет игнорироваться фильтр по работам.  
+Тело ответа идентичное, как в [-api/manage/get-orders](#post--apimanageget-orders).  
+Чтобы не перегружать документ, не буду дублировать оттуда json.  
