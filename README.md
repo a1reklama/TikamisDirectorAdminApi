@@ -409,7 +409,7 @@
             },
             {
               "type": "free",
-              "plate": null,
+              "plate": "",
               "blockStart": 1534,
               "blockEnd": 1702
             }
