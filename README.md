@@ -43,7 +43,7 @@
 - POST - `-api/report/get-customer-skips` - Получить данные для экрана "Не приехавшие клиенты" [ссылка](#post--apireportget-customer-skips)
 - POST - `-api/report/get-canceled-works` - Получить данные для экрана "Заказанные, но невыполненные работы" [ссылка](#post--apireportget-canceled-works)
 - POST - `-api/report/get-added-works` - Получить данные для экрана "дополнительные работы" [ссылка](#post--apireportget-added-works)
-- POST - `-api/report/get-plate-fakes` - Получить данные для экрана "Фальшивые номера"
+- POST - `-api/report/get-plate-fakes` - Получить данные для экрана "Фальшивые номера" [ссылка](#post--apireportget-plate-fakes)
 - POST - `-api/report/get-suspicious-phones` - Получить данные для экрана "Подозрительная привязка номеров"
 
 
