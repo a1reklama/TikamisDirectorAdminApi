@@ -36,7 +36,7 @@
 - POST - `-api/analytics/get-posts-KPD` - Получить данные для "Кпд постов" [ссылка](#post--apianalyticsget-posts-kpd)
 - POST - `-api/analytics/get-center-KPD` - Получить данные для "Кпд сервиса"
 - POST - `-api/analytics/get-order-history` - Получить данные для экрана "сервисная история" [ссылка](#post--apianalyticsget-order-history)
-- POST - `-api/analytics/get-reviews` - Получить данные для экрана с отзывами
+- POST - `-api/analytics/get-reviews` - Получить данные для экрана с отзывами [ссылка](#post--apianalyticsget-reviews)
 
 ## Раздел ОТЧЕТЫ
 - POST - `-api/report/get-posts-downtime` - Получить данные для экрана "Простои постов"
