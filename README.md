@@ -583,7 +583,7 @@
       "type": 1,
       "voiceContent": null,
       "textContent": null,
-      "smileContext": "Смайл \"Хорошо\"",
+      "smileContent": "Смайл \"Хорошо\"",
       "tone": "Хорошо",
       "date": 1706109723,
       "phoneNumber": "+79123456789",
