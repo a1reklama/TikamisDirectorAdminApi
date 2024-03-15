@@ -25,7 +25,7 @@
 - POST `-api/manage/get-orders` - Данные для экрана "записи клиентов". [ссылка](#post--apimanageget-orders)
 - DELETE - `-api/manage/order` - Удалить одну запись (по нажатию на крестик). [ссылка](#delete--apimanageorder)
 
-- POST - `-api/manage/get-shift-calendar` - Получить "календарь рабочих смен"
+- POST - `-api/manage/get-shift-calendar` - Получить "календарь рабочих смен" [ссылка](#post--apimanageget-shift-calendar)
 - POST - `-api/manage/shift_calendar` - Изменить статус одного для из календаря
 
 ## Раздел АНАЛИТИКА
