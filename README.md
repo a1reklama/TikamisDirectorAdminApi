@@ -17,6 +17,7 @@
 
 ## Раздел УПРАВЛЕНИЕ
 - GET `sadmin-api/manage/car-centers` - Получить список и описание для всех автосервисов для экрана "Управление автосервисами". [ссылка](#get-sadmin-apimanagecar-centers-)
+- POST - `sadmin-api/manage/work-sale-text` - Изменить условия акции одной работы [ссылка](#post--apimanagework-sale-text)
 - GET `director-api/manage/settings` / `sadmin-api/manage/settings/{carCenterId}` - Получить текущие настройки автосервиса. Экран "Технические настройки" [ссылка(директор)](#get-director-apimanagesettings) [ссылка(суперадмин)](#get-sadmin-apimanagesettingscarcenterid)
 - POST `director-api/manage/settings` / `sadmin-api/manage/settings` - Изменение настроек определенного автосервиса. [ссылка(директор)](#post-director-apimanagesettings) [ссылка(суперадмин)](#post-sadmin-apimanagesettings)
 
@@ -448,6 +449,26 @@
 | newState 2         | Выходной день. Если день ранее был установлен как выходной либо директор устанавливает его как выходной.                    |  
 
 В ответе будет новый актуальный календарь. Формат [здесь](#post--apimanageget-shift-calendar)
+
+#### POST `sadmin-api/manage/work-sale-text`
+
+Изменить условия акции и примечание.  
+Экран на фигме "Настройки описания работы".  
+Формат тела запроса:  
+```json
+{
+  "id": "ИБ-2373",
+  "saleText": "При покупке моторного...",
+  "saleNote": "Работы по обнулению..."
+}
+```
+
+| Поле     | Тип    | Описание                     |
+|----------|--------|------------------------------|
+| id       | string | Айди работы                  | 
+| saleText | string | Условия акции.               |
+| saleNote | string | Примечание к условиям акции. |
+
 
 #### POST `-api/analytics/get-workloads`
 
