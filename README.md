@@ -11,7 +11,8 @@
 - POST `director-api/logout` / `sadmin-api/logout` - деавторизация. [ссылка](#post--apilogout)
 - GET `director-api/time` / `sadmin-api/time` - Получить текущее для прикрепленного автосервиса время. [ссылка](#get--apitime)
 - POST `director-api/report-emails` / `sadmin-api/report-emails` - Рассылка отчетов по email адресам.
-- GET `director-api/all-works` / `sadmin-api/all-works` - Получить id и названия всех работ (понадобится для фильтров). [ссылка](#get--apiall-works)
+- GET `director-api/all-works` / `sadmin-api/all-works` - Получить id, названия и условия акций всех работ (понадобится для фильтров и экрана "Описание работ"). [ссылка](#get--apiall-works)
+- GET `director-api/work-prices` / `sadmin-api/work-prices/{centerId}` - Получить цены и названия работ (понадобится для создания заказа через "Загруженность сервиса") [ссылка](#get-sadmin-apiwork-pricescenterid-и-director-apiwork-prices)
 - GET `sadmin-api/all-car-centers` - Получить id и названия всех автосервисов (также для фильтров). [ссылка](#get-sadmin-apiall-car-centers)
 - GET `director-api/center-info` - Получить название города и адреса автосервиса, к которому прикреплен директор панели. [ссылка](#get-director-apicenter-info)
 
@@ -150,6 +151,23 @@
 | name     | string          | Имя работы                                                    |
 | saleText | string или null | Условия акции. Если акция на услугу не предусмотрена, то null |
 | saleNote | string или null | Примечание к условиям акции                                   |
+
+#### GET `sadmin-api/work-prices/{centerId}` и `director-api/work-prices`
+
+Получить ценники и имя услуг.  
+Для суперадмина обязательно нужно в строке запроса указать айди автосервиса.  
+Формат ответа будет такой:  
+```json
+{
+  "works": [
+    {
+      "workId": "ИБ-84293",
+      "name": "Шумоизоляция",
+      "price": 1500
+    }
+  ]
+}
+```
 
 ## Раздел УПРАВЛЕНИЕ
 
@@ -599,7 +617,7 @@
 | phone         | телефон                                                                                                                                                                                                                                                |
 | plate         | номер автомобиля                                                                                                                                                                                                                                       |
 | region        | регион                                                                                                                                                                                                                                                 |
-| works         | массив из айди работ                                                                                                                                                                                                                                   |
+| works         | массив из айди работ. Их можно получить из `director-api/work-prices` / `sadmin-api/work-prices/{centerId}`                                                                                                                                            |
 
 Ответ будет пустой, в случае успеха будет ответ 200.  
 
