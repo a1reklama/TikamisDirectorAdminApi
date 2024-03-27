@@ -17,7 +17,7 @@
 
 ## Раздел УПРАВЛЕНИЕ
 - GET `sadmin-api/manage/car-centers` - Получить список и описание для всех автосервисов для экрана "Управление автосервисами". [ссылка](#get-sadmin-apimanagecar-centers-)
-- POST - `sadmin-api/manage/work-sale-text` - Изменить условия акции одной работы [ссылка](#post--apimanagework-sale-text)
+- POST - `sadmin-api/manage/work-sale-text` - Изменить условия акции одной работы [ссылка](#post-sadmin-apimanagework-sale-text)
 - GET `director-api/manage/settings` / `sadmin-api/manage/settings/{carCenterId}` - Получить текущие настройки автосервиса. Экран "Технические настройки" [ссылка(директор)](#get-director-apimanagesettings) [ссылка(суперадмин)](#get-sadmin-apimanagesettingscarcenterid)
 - POST `director-api/manage/settings` / `sadmin-api/manage/settings` - Изменение настроек определенного автосервиса. [ссылка(директор)](#post-director-apimanagesettings) [ссылка(суперадмин)](#post-sadmin-apimanagesettings)
 
